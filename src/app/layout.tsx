@@ -34,6 +34,12 @@ export const metadata: Metadata = {
   description: "A romantic digital Valentine's experience for Okiki.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{

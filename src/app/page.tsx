@@ -246,7 +246,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen text-[#fff3f4]">
+    <div className="relative min-h-svh text-[#fff3f4]">
       <audio
         ref={audioRef}
         src="/miamor.mp3"
@@ -335,7 +335,7 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      <main className="text-shadow relative z-10 mx-auto flex w-full max-w-5xl flex-col gap-24 px-6 pb-24 pt-20 sm:px-10">
+      <main className="text-shadow relative z-10 mx-auto flex w-full max-w-5xl flex-col gap-16 px-4 pb-20 pt-16 sm:gap-24 sm:px-10 sm:pb-24 sm:pt-20">
         <section className="relative flex flex-col items-center text-center">
           <motion.div
             className="absolute -top-10 h-52 w-52 rounded-full bg-[#fbd4de] blur-3xl"
@@ -347,23 +347,23 @@ export default function Home() {
             }}
             transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
           />
-          <motion.div
-            className="relative z-10 flex flex-col items-center gap-6 rounded-3xl border border-white/20 bg-black/40 px-8 py-10 backdrop-blur-sm"
+            <motion.div
+              className="relative z-10 flex flex-col items-center gap-6 rounded-3xl border border-white/20 bg-black/40 px-6 py-8 backdrop-blur-sm sm:px-8 sm:py-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.6, ease: "easeOut" }}
           >
-            <h1 className="font-playfair shimmer-text text-4xl font-semibold text-[#fff3f4] sm:text-5xl">
+              <h1 className="font-playfair shimmer-text text-3xl font-semibold text-[#fff3f4] sm:text-5xl">
               Happy Valentine&apos;s Day, Okiki ❤️
             </h1>
-            <p className="max-w-2xl text-lg text-white/80 sm:text-xl">
+              <p className="max-w-2xl text-base text-white/80 sm:text-xl">
               My love, my happiness, my everything.
             </p>
-            <button
-              type="button"
-              onClick={triggerRoseConfetti}
-              className="rounded-full bg-white/90 px-6 py-3 text-base font-semibold text-[#6a1121] transition hover:scale-[1.02]"
-            >
+              <button
+                type="button"
+                onClick={triggerRoseConfetti}
+                className="rounded-full bg-white/90 px-6 py-3 text-sm font-semibold text-[#6a1121] transition hover:scale-[1.02] sm:text-base"
+              >
               Accept Flowers 🌹
             </button>
             <motion.div
@@ -378,15 +378,15 @@ export default function Home() {
         </section>
 
         <section className="flex flex-col items-center">
-          <div className="w-full max-w-3xl rounded-3xl border border-white/20 bg-black/40 px-8 py-8 text-center shadow-xl backdrop-blur-sm">
+          <div className="w-full max-w-3xl rounded-3xl border border-white/20 bg-black/40 px-6 py-7 text-center shadow-xl backdrop-blur-sm sm:px-8 sm:py-8">
             <p className="text-xs uppercase tracking-[0.3em] text-white/60">
               Since 14 Dec 2025
             </p>
-            <h2 className="mt-3 font-playfair text-2xl text-[#fff3f4] sm:text-3xl">
+            <h2 className="mt-3 font-playfair text-xl text-[#fff3f4] sm:text-3xl">
               Loving you for:
             </h2>
             <p
-              className="mt-4 text-lg text-white/85 sm:text-xl"
+              className="mt-4 text-base text-white/85 sm:text-xl"
               aria-live="polite"
               suppressHydrationWarning
             >
@@ -398,11 +398,11 @@ export default function Home() {
         </section>
 
         <section className="flex flex-col gap-6">
-          <div className="mx-auto w-full max-w-2xl rounded-3xl border border-white/20 bg-black/40 px-6 py-5 text-center backdrop-blur-sm">
-            <h2 className="font-playfair shimmer-text text-3xl text-[#fff3f4]">
+          <div className="mx-auto w-full max-w-2xl rounded-3xl border border-white/20 bg-black/40 px-5 py-5 text-center backdrop-blur-sm sm:px-6">
+            <h2 className="font-playfair shimmer-text text-2xl text-[#fff3f4] sm:text-3xl">
               Why You?
             </h2>
-            <p className="mt-2 text-base text-white/75">
+            <p className="mt-2 text-sm text-white/75 sm:text-base">
               Little reasons my heart says yes every day.
             </p>
           </div>
@@ -410,9 +410,9 @@ export default function Home() {
             {reasons.map((reason) => (
               <div
                 key={reason}
-                className="min-w-[240px] snap-center rounded-3xl border border-white/20 bg-black/40 px-6 py-6 text-center backdrop-blur-md sm:min-w-[280px]"
+                className="min-w-56 snap-center rounded-3xl border border-white/20 bg-black/40 px-5 py-5 text-center backdrop-blur-md sm:min-w-70 sm:px-6 sm:py-6"
               >
-                <p className="font-playfair text-lg text-white/90">
+                <p className="font-playfair text-base text-white/90 sm:text-lg">
                   {reason}
                 </p>
               </div>
@@ -422,16 +422,16 @@ export default function Home() {
 
         <section className="flex flex-col items-center">
           <motion.div
-            className="max-w-3xl rounded-3xl border border-white/20 bg-black/40 px-8 py-10 text-center shadow-xl backdrop-blur-sm"
+            className="max-w-3xl rounded-3xl border border-white/20 bg-black/40 px-6 py-8 text-center shadow-xl backdrop-blur-sm sm:px-8 sm:py-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 2, ease: "easeOut" }}
           >
-            <h2 className="font-playfair shimmer-text text-3xl text-[#fff3f4]">
+            <h2 className="font-playfair shimmer-text text-2xl text-[#fff3f4] sm:text-3xl">
               Love Letter
             </h2>
-            <p className="font-dancing mt-6 whitespace-pre-line text-xl leading-relaxed text-white/85 sm:text-2xl">
+            <p className="font-dancing mt-6 whitespace-pre-line text-lg leading-relaxed text-white/85 sm:text-2xl">
               {`My Dearest Okiki,
 Since December 14th, my world has completely changed. You didn’t just walk into my life; you brought a light that I never knew I was missing.
 You are my peace, my joy, and my greatest blessing. Every day with you feels like a gift. Thank you for being my rock, for understanding me without words, and for making life so incredibly beautiful.
@@ -448,20 +448,20 @@ David.`}
         </div>
 
         <section className="flex flex-col items-center gap-6">
-          <div className="mx-auto w-full max-w-2xl rounded-3xl border border-white/20 bg-black/40 px-6 py-5 text-center backdrop-blur-sm">
-            <h2 className="font-playfair shimmer-text text-3xl text-[#fff3f4]">
+          <div className="mx-auto w-full max-w-2xl rounded-3xl border border-white/20 bg-black/40 px-5 py-5 text-center backdrop-blur-sm sm:px-6">
+            <h2 className="font-playfair shimmer-text text-2xl text-[#fff3f4] sm:text-3xl">
               Spin The Bottle Date
             </h2>
-            <p className="mt-2 text-base text-white/75">
+            <p className="mt-2 text-sm text-white/75 sm:text-base">
               Tap to pick our next little adventure.
             </p>
           </div>
-          <div className="w-full max-w-2xl rounded-3xl border border-white/20 bg-black/40 px-8 py-10 text-center shadow-xl backdrop-blur-sm">
+          <div className="w-full max-w-2xl rounded-3xl border border-white/20 bg-black/40 px-6 py-8 text-center shadow-xl backdrop-blur-sm sm:px-8 sm:py-10">
             <div className="mx-auto flex flex-col items-center gap-6">
               <button
                 type="button"
                 onClick={handleSpinBottle}
-                className="relative flex h-44 w-44 items-center justify-center rounded-full border border-white/20 bg-white/5 transition hover:scale-[1.02]"
+                className="relative flex h-40 w-40 items-center justify-center rounded-full border border-white/20 bg-white/5 transition hover:scale-[1.02] sm:h-44 sm:w-44"
                 aria-label="Spin the bottle to choose a date"
               >
                 <div className="absolute -top-3 h-6 w-6 rounded-full bg-white/80 text-[#6a1121] shadow-md">
@@ -478,7 +478,7 @@ David.`}
               <button
                 type="button"
                 onClick={handleSpinBottle}
-                className="rounded-full bg-white/90 px-6 py-3 text-base font-semibold text-[#6a1121] transition hover:scale-[1.02]"
+                className="rounded-full bg-white/90 px-6 py-3 text-sm font-semibold text-[#6a1121] transition hover:scale-[1.02] sm:text-base"
               >
                 Spin the bottle
               </button>
@@ -490,7 +490,7 @@ David.`}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.5 }}
-                    className="font-playfair text-xl text-white"
+                    className="font-playfair text-lg text-white sm:text-xl"
                   >
                     {selectedDateIdea}
                   </motion.p>
@@ -501,7 +501,7 @@ David.`}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.5 }}
-                    className="text-white/70"
+                    className="text-sm text-white/70 sm:text-base"
                   >
                     Spin to reveal our next date.
                   </motion.p>
@@ -516,15 +516,15 @@ David.`}
         </div>
 
         <section className="flex flex-col gap-6">
-          <div className="mx-auto w-full max-w-2xl rounded-3xl border border-white/20 bg-black/40 px-6 py-5 text-center backdrop-blur-sm">
-            <h2 className="font-playfair shimmer-text text-3xl text-[#fff3f4]">
+          <div className="mx-auto w-full max-w-2xl rounded-3xl border border-white/20 bg-black/40 px-5 py-5 text-center backdrop-blur-sm sm:px-6">
+            <h2 className="font-playfair shimmer-text text-2xl text-[#fff3f4] sm:text-3xl">
               Just For You
             </h2>
-            <p className="mt-2 text-base text-white/75">
+            <p className="mt-2 text-sm text-white/75 sm:text-base">
               Tap a ticket whenever you want to redeem it.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {couponData.map((coupon, index) => {
               const Icon = coupon.icon;
               const isRedeemed = redeemSet.has(index);
@@ -564,15 +564,15 @@ David.`}
         </section>
 
         <section className="flex flex-col items-center gap-6">
-          <div className="mx-auto w-full max-w-3xl rounded-3xl border border-white/20 bg-black/40 px-8 py-10 text-center shadow-xl backdrop-blur-sm">
-            <h2 className="font-playfair text-2xl text-[#fff3f4] sm:text-3xl">
+          <div className="mx-auto w-full max-w-3xl rounded-3xl border border-white/20 bg-black/40 px-6 py-8 text-center shadow-xl backdrop-blur-sm sm:px-8 sm:py-10">
+            <h2 className="font-playfair text-xl text-[#fff3f4] sm:text-3xl">
               One last thing... Will you be my Valentine? 🥺
             </h2>
-            <div className="relative mt-8 flex flex-wrap items-center justify-center gap-4">
+            <div className="relative mt-6 flex flex-wrap items-center justify-center gap-4 sm:mt-8">
               <button
                 type="button"
                 onClick={handleYesClick}
-                className="rounded-full bg-white/90 px-6 py-3 text-base font-semibold text-[#6a1121] transition hover:scale-[1.05]"
+                className="rounded-full bg-white/90 px-6 py-3 text-sm font-semibold text-[#6a1121] transition hover:scale-[1.05] sm:text-base"
               >
                 YES
               </button>
@@ -582,7 +582,7 @@ David.`}
                 onTouchStart={moveNoButton}
                 animate={{ x: noPosition.x, y: noPosition.y }}
                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                className="rounded-full border border-white/30 bg-white/10 px-6 py-3 text-base font-semibold text-white"
+                className="rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white sm:text-base"
               >
                 NO
               </motion.button>
@@ -591,8 +591,8 @@ David.`}
         </section>
 
         <section className="flex flex-col items-center">
-          <div className="w-full max-w-3xl rounded-3xl border border-white/10 bg-[#14161a] px-6 py-6 shadow-xl">
-            <pre className="font-mono text-sm text-green-300">
+          <div className="w-full max-w-3xl rounded-3xl border border-white/10 bg-[#14161a] px-5 py-5 shadow-xl sm:px-6 sm:py-6">
+            <pre className="font-mono text-xs text-green-300 sm:text-sm">
 {`## Changelog
 - v1.0 (Dec 14): Initial Release (Met You).
 - v2.0: Patched 'Loneliness' bug.
@@ -611,7 +611,7 @@ David.`}
       <button
         type="button"
         onClick={toggleAudio}
-        className={`fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full border border-white/30 bg-black/50 text-white shadow-xl backdrop-blur-sm transition hover:scale-[1.05] ${
+        className={`fixed bottom-[calc(1.5rem+env(safe-area-inset-bottom))] right-[calc(1.5rem+env(safe-area-inset-right))] z-40 flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-black/50 text-white shadow-xl backdrop-blur-sm transition hover:scale-[1.05] sm:h-14 sm:w-14 ${
           isAudioMuted ? "animate-pulse" : ""
         }`}
         aria-label={isAudioMuted ? "Unmute music" : "Mute music"}
@@ -627,7 +627,7 @@ David.`}
         href={whatsappLink}
         target="_blank"
         rel="noreferrer"
-        className="fixed bottom-24 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full border border-white/30 bg-black/50 text-white shadow-xl backdrop-blur-sm transition hover:scale-[1.05]"
+        className="fixed bottom-[calc(4.5rem+env(safe-area-inset-bottom))] right-[calc(1.5rem+env(safe-area-inset-right))] z-40 flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-black/50 text-white shadow-xl backdrop-blur-sm transition hover:scale-[1.05] sm:h-14 sm:w-14"
         aria-label="Send love on WhatsApp"
       >
         <span className="text-xl">💚</span>
